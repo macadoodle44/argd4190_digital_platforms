@@ -1,15 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="author" content="Ava Banko">
+    <meta name="description" content="A website dedicated to the Cooper Black typeface, its history, and examples of its use.">
+    <title>Home</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Monsieur+La+Doulaise&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="https://use.typekit.net/znf4dzp.css">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
+    <link rel="manifest" href="favicons/site.webmanifest">
+
 
     <div style="margin-left: 50px; margin-right: 50px;">
         <button><link><a href="index.html">Home</a></link></button>
@@ -22,20 +31,20 @@
             background-color: rgb(189, 208, 247);
         }
         h1 {
-            color: rgb(65, 113, 215);
+            color: rgb(21, 57, 101);
             font-size: 72px;
             font-family: "cooper-black-std", serif;
             font-style: normal;
             line-height: 1.2;
         }
         h2 {
-            color: rgb(37, 78, 165);
+            color: rgb(65, 133, 215);
             font-size: 48px;
             font-family: 'Poppins';
             line-height: 1.2;
         }
         h3 {
-            color: rgb(9, 64, 184);
+            color: rgb(36, 95, 168);
             font-size: 32px;
             font-family: 'Poppins';
             line-height: 1.5;
@@ -44,7 +53,7 @@
             text-decoration-style: wavy;
         }
         p {
-            color: rgb(20, 39, 77);
+            color: rgb(10, 29, 51);
             font-size: 24px;
             font-family: 'Poppins', sans-serif;
             line-height: 1.5;
@@ -57,7 +66,7 @@
         }
         button {
             background-color: white;
-            color: rgb(65, 113, 215);
+            color: rgb(65, 133, 215);
             font-family: 'Poppins', sans-serif;
             font-size: 16px;
             padding: 10px 20px;
@@ -66,7 +75,7 @@
             margin-right: 10px;
         }
         img {
-            border: 5px solid rgb(65, 113, 215);
+            border: 5px solid rgb(36, 95, 168);
             border-radius: 40px;
             width: 90%;
             height: auto;
@@ -75,8 +84,37 @@
 
         .container {
             display: grid;
-            grid-template-columns: auto auto auto;
+            grid-template-areas: 
+                "main side";
             padding: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                grid-template-areas: 
+                    "main"
+                    "side";
+            }
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 48px;
+            }
+            h3 {
+                font-size: 28px;
+            }
+            p {
+                font-size: 18px;
+            }
+        }
+
+        .main {
+            grid-area: main;
+        }
+
+        .side {
+            grid-area: side;
         }
     </style>
 </head>
@@ -84,18 +122,25 @@
 <body>
     <div style="margin-left: 50px; margin-right: 50px; margin-top: 50px;">
         <h1>Cooper Black Compendium</h1>
-        <h2>Welcome :)</h2>
-        <h3>Explore with the navigation buttons to learn more</h3>
+            <h2>Welcome</h2>
+                <h3>Explore with the navigation buttons above to learn more!</h3>
             <div class="container">
-                <img 
+                <div class="main">
+                    <img 
                     src="assets/cbex.png" 
-                    alt="Examples of different forms of the Cooper Black typeface">
-
-                <p>I made this website because I noticed that Cooper Black is just EVERYWHERE, and I wanted a place to display all of my finds. 
+                    alt="Examples of different forms of the Cooper Black typeface" />
+                </div>
+                <div class="side">
+                    <p>I made this website because I noticed that Cooper Black is just EVERYWHERE, and I wanted a place to display all of my finds. 
                     I hope someone finds this at least a little bit funny or this enlightens people to how much Cooper Black is out there. 
                     To me, Cooper Black is just so distinct and easy to spot once you know what you're looking for. Maybe by exposing people 
                     to it, more people will begin to see it everywhere like I do. The image to the left should give you a good idea on what 
                     this typeface looks like.</p>
+                    <p>Mostly I just find it funny to point it out when this typeface appears because it
+                    annoys my friends. But on a deeper level, it is really cool to see how a typeface thats
+                    over 100 years old is still so popular. 
+                    </p>
+                </div>
             </div>
     </div>
 

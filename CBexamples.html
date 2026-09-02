@@ -3,13 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="author" content="Ava Banko">
+    <meta name="description" content="A website showing everyday examples of the Cooper Black typeface.">
+    <title>Examples</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Monsieur+La+Doulaise&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="https://use.typekit.net/znf4dzp.css">
+    
 
     <div style="margin-left: 50px; margin-right: 50px;">
         <button><link><a href="index.html">Home</a></link></button>
@@ -22,26 +25,26 @@
             background-color: rgb(189, 208, 247);
         }
         h1 {
-            color: rgb(65, 113, 215);
+            color: rgb(21, 57, 101);
             font-size: 72px;
             font-family: "cooper-black-std", serif;
             font-style: normal;
             line-height: 1.2;
         }
         h2 {
-            color: rgb(37, 78, 165);
+            color: rgb(65, 133, 215);
             font-size: 48px;
             font-family: 'Poppins';
             line-height: 1.2;
         }
         h3 {
-            color: rgb(9, 64, 184);
+            color: rgb(36, 95, 168);
             font-size: 32px;
             font-family: 'Poppins';
             line-height: 1.5;
         }
         p {
-            color: rgb(20, 39, 77);
+            color: rgb(10, 29, 51);
             font-size: 24px;
             font-family: 'Poppins', sans-serif;
             line-height: 1.5;
@@ -54,7 +57,7 @@
         }
          button {
             background-color: white;
-            color: rgb(65, 113, 215);
+            color: rgb(65, 133, 215);
             font-family: 'Poppins', sans-serif;
             font-size: 16px;
             padding: 10px 20px;
@@ -63,7 +66,7 @@
             margin-right: 10px;
         }
          img {
-            border: 5px solid rgb(65, 113, 215);
+            border: 5px solid rgb(36, 95, 168);
             border-radius: 40px;
             width: 90%;
             height: auto;
@@ -72,39 +75,71 @@
 
         .container {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            padding: 30px;
+            grid-template-columns: 1fr 1fr 1fr;
+            padding: 40px;
+            column-gap: 10px;
+            row-gap: 40px;
+            justify-content: center;
+            align-items: center;
         }
+
+
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 48px;
+            }
+            h3 {
+                font-size: 28px;
+            }
+            p {
+                font-size: 18px;
+            }
+        }
+
     </style>
 </head>
 
 <body>
     <div style="margin-left: 50px; margin-right: 50px; margin-top: 50px;">
         <h1>Examples of Cooper Black</h1>
-        <hr color="rgb(8, 23, 97)" size="5">
+        <hr color="darkgoldenrod" size="5">
         <h3>These are some examples of Cooper Black I've found in the wild.</h3>
     </div>
     <div class="container">
-        <div>
+        <div class="box">
             <img 
                 src="assets/pestCB.png" 
                 alt="A white pest control truck that uses Cooper Black and a maple leaf for it's logo.">
         </div>
-        <div>
+        <div class="box">
             <img 
                 src="assets/stCB.png" 
                 alt="A poster found in Stranger Things using Cooper Black to say 'All Creatures Welcome'.">
         </div>
-        <div>
+        <div class="box">
             <img 
                 src="assets/garfieldCB.png" 
                 alt="Logo for the Garfield comic strip done in Cooper Black.">
         </div>
-         <div>
+         <div class="box">
             <img 
                 src="assets/TootsieCB.jpg" 
                 alt="The Tootsie Roll logo, white text on brown, is Cooper Black.">
         </div>
+        <div>
+            <img 
+                src="assets/ChrisCB.jpg" 
+                alt="Title of the Show 'Eveybody Hates Chris' is in Cooper Black.">
+        </div>
     </div>
+    <div style="margin-left: 50px; margin-right: 50px; margin-top: 50px;"> 
+        <h3>Visit the History page to learn how Cooper Black became a cult classic.</h3>
+    </div> 
 </body>
 </html>
